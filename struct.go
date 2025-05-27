@@ -1,0 +1,26 @@
+package main
+
+import (
+    "fmt"
+)
+
+// Struct
+type Produk struct {
+    Nama  string
+    Harga int
+}
+
+// Fungsi
+func CetakProduk(p Produk) string {
+    return fmt.Sprintf("Nama Produk: %s, Harga: %d", p.Nama, p.Harga)
+}
+
+func main() {
+    p := Produk{
+        Nama:  "Teh Botol",
+        Harga: 5000,
+    }
+
+    hasil := CetakProduk(p)
+    fmt.Println(hasil)
+}

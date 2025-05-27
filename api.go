@@ -21,5 +21,5 @@ func main() {
         c.JSON(200, produk)
     })
 
-    r.Run() // Jalankan server di localhost:8080
+    r.Run() //Menjalankan server di localhost:8080
 }

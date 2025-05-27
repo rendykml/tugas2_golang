@@ -11,7 +11,7 @@ type Produk struct {
 }
 
 // Fungsi
-func CetakProduk(p Produk) string {
+func TambahProduk(p Produk) string {
     return fmt.Sprintf("Nama Produk: %s, Harga: %d", p.Nama, p.Harga)
 }
 
@@ -21,6 +21,6 @@ func main() {
         Harga: 7000,
     }
 
-    hasil := CetakProduk(p)
+    hasil := TambahProduk(p)
     fmt.Println(hasil)
 }

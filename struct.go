@@ -17,8 +17,8 @@ func CetakProduk(p Produk) string {
 
 func main() {
     p := Produk{
-        Nama:  "Teh Botol",
-        Harga: 5000,
+        Nama:  "Teh Sibo",
+        Harga: 7000,
     }
 
     hasil := CetakProduk(p)

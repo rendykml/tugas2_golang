@@ -12,7 +12,7 @@ type Produk struct {
 
 // Fungsi
 func TambahProduk(p Produk) string {
-    return fmt.Sprintf("Nama produk: %s, Harga: %d", p.Nama, p.Harga)
+    return fmt.Sprintf("Nama produk: %s, Harga: %d",p.Nama,p.Harga)
 }
 
 func main() {

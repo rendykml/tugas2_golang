@@ -26,7 +26,7 @@ func main() {
         c.JSON(http.StatusOK, gin.H{
             "status":  "sukses",
             "data":    data,
-            "message": "Berhasil mengambil data produk",
+            "message": "Berhasil mengambil produk",
         })
     })
 

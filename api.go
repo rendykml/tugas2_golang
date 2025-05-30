@@ -2,24 +2,33 @@ package main
 
 import (
     "github.com/gin-gonic/gin"
+    "net/http"
 )
 
 type Produk struct {
-    Nama  string `json:"nama"`
-    Harga int    `json:"harga"`
+    ID    int     `json:"id"`
+    Nama  string  `json:"nama"`
+    Harga float64 `json:"harga"`
+}
+
+func AmbilProduk() []Produk {
+    return []Produk{
+        {ID: 1, Nama: "Air Mineral", Harga: 5000},
+        {ID: 2, Nama: "Teh Botol", Harga: 6000},
+    }
 }
 
 func main() {
     r := gin.Default()
 
     r.GET("/produk", func(c *gin.Context) {
-        produk := Produk{
-            Nama:  "Teh Sibo",
-            Harga: 7000,
-        }
-
-        c.JSON(200, produk)
+        data := AmbilProduk()
+        c.JSON(http.StatusOK, gin.H{
+            "status":  "sukses",
+            "data":    data,
+            "message": "Berhasil mengambil data produk",
+        })
     })
 
-    r.Run() //Menjalankan server di localhost:8080
+    r.Run() 
 }

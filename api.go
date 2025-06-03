@@ -14,7 +14,7 @@ type Produk struct {
 func AmbilProduk() []Produk {
     return []Produk{
         {ID: 1, Nama: "Air Mineral", Harga: 5000},
-        {ID: 2, Nama: "Teh Sibo", Harga: 6000},
+        {ID: 2, Nama: "Teh Sibo", Harga: 7000},
     }
 }
 
